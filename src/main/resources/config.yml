@@ -1,0 +1,31 @@
+# Yenileme yapilacak dunya (klasor adi)
+world: arena
+
+# Bir blok degistikten kac saniye sonra eski haline donsun
+delay-seconds: 120
+
+# Geri koyma hizi sinirlari (lag onleme). Ikisinden biri dolunca o tick biter.
+# Her tick'te en fazla kac blok geri konsun:
+blocks-per-tick: 200
+# Her tick'te geri koymaya en fazla kac milisaniye harcansin (1 tick = 50 ms).
+# 2.0 sunucuyu hissedilir sekilde yormaz. Geri gelme cok yavassa 4-5'e cikarabilirsin.
+max-ms-per-tick: 2.0
+
+# Ayni anda bekleyebilecek en fazla blok sayisi (bellek korumasi).
+max-pending: 300000
+
+# Hangi olaylar yenilensin
+regen:
+  explosions: true      # TNT, creeper, yatak, respawn anchor vb.
+  player-break: true    # Oyuncunun kirdigi bloklar
+  player-place: true    # Oyuncunun koydugu bloklar (silinir)
+  fire: true            # Yanan bloklar
+  fluids: true          # Kova ile konan/akan su ve lav, olusan cobblestone/obsidyen
+  falling-blocks: true  # Kum, cakil, enderman, wither vb. blok degisimleri
+
+# Kirilan/patlayan bloklar esya dusurmesin
+no-drops: true
+
+# Patlayan sandik/fici/shulker icerigi yere dusmesin.
+# Kapali olursa esyalar hem yere duser hem de sandik geri gelince tekrar dolar (esya cogaltma!)
+clear-containers-on-explosion: true

@@ -1,0 +1,13 @@
+name: ArenaRegen
+version: '1.0'
+main: me.arena.arenaregen.ArenaRegen
+api-version: '1.21'
+description: Arena dunyasindaki bloklari belirli sure sonra geri getirir.
+commands:
+  arenaregen:
+    description: ArenaRegen yonetim komutu
+    usage: /arenaregen <reload|now|status>
+    permission: arenaregen.admin
+permissions:
+  arenaregen.admin:
+    default: op
